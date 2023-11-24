@@ -1,0 +1,58 @@
+<!-- item_country.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="@dimen/_110sdp"
+    app:cardBackgroundColor="@color/light_black"
+    android:layout_height="@dimen/_150sdp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="false"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgMovie"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/test"
+            android:adjustViewBounds="true"
+            android:layout_height="@dimen/_110sdp"/>
+        <LinearLayout
+            android:gravity="center"
+            android:weightSum="3"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgShare"
+                android:src="@drawable/ic_share"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgStar"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_star"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBookMark"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_bookmark"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/button_background"
+    >
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCast"
+        android:textSize="@dimen/_14sdp"
+        android:textAllCaps="false"
+        android:textColor="@color/color_blue"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cast"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDirector"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/color_blue"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Director"
+       />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDescription"
+        android:textAllCaps="false"
+        android:textColor="@color/color_blue"
+        android:textSize="@dimen/_14sdp"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCancel"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/color_blue"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

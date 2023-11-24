@@ -1,0 +1,47 @@
+<!-- res/navigation/nav_graph.xml -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        tools:layout="@layout/fragment_movies"
+        android:name="com.example.sheridancollege.prog39402.thinh.ravi.rumleen.fragment.MoviesFragment"
+        android:label="Movies">
+
+        <action
+            android:id="@+id/action_moviesFragment_to_tvShowsFragment"
+            app:destination="@id/tvShowsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tvShowsFragment"
+        tools:layout="@layout/fragment_t_v_shows"
+        android:name="com.example.sheridancollege.prog39402.thinh.ravi.rumleen.fragment.TVShowsFragment"
+        android:label="TV Shows">
+        <action
+            android:id="@+id/action_tvShowsFragment_to_moviesFragment"
+            app:destination="@id/moviesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myListFragment"
+        tools:layout="@layout/fragment_my_list"
+        android:name="com.example.sheridancollege.prog39402.thinh.ravi.rumleen.fragment.MyListFragment"
+        android:label="My List">
+        <action
+            android:id="@+id/action_tvShowsFragment_to_myListFragment"
+            app:destination="@id/myListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/watchedFragment"
+        tools:layout="@layout/fragment_watched_list"
+        android:name="com.example.sheridancollege.prog39402.thinh.ravi.rumleen.fragment.WatchedListFragment"
+        android:label="Watched">
+        <action
+            android:id="@+id/action_myListFragment_to_watchedFragment"
+            app:destination="@id/watchedFragment" />
+    </fragment>
+</navigation>
