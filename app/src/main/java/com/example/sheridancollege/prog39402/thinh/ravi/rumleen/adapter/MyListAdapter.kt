@@ -52,8 +52,8 @@ class MyListAdapter(context:Activity, private var movies: List<MyLists>) :
             intent.putExtra("id",movies.id)
             intent.putExtra("isChildren",movies.isChildren)
             intent.putExtra("isInMyList",movies.isInMyList)
-            intent.putExtra("description","")
-            intent.putExtra("showType","movie")
+            intent.putExtra("description","Work In Progress. Please Come Back Later!") //Unfinished feature
+            intent.putExtra("showType","list")
             intent.putExtra("name",movies.name)
             intent.putExtra("rating",movies.rating)
             intent.putExtra("time",movies.total_time)
@@ -61,6 +61,8 @@ class MyListAdapter(context:Activity, private var movies: List<MyLists>) :
             intent.putExtra("isWatched",movies.isWatched)
             intent.putExtra("director_name",movies.director_name)
             intent.putExtra("director_image",movies.director_image)
+            intent.putExtra("user_review",movies.user_review)
+            intent.putExtra("user_score",movies.user_score)
             context1.startActivity(intent)
         }
 

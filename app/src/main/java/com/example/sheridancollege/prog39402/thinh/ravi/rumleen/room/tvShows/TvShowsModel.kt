@@ -42,5 +42,25 @@ class TvShowsModel() : ViewModel() {
         TVShowsRepository.updateIsWatched(context,isWatched,id)
     }
 
+    fun getUserScore(context: Context,id:Int):LiveData<String>
+    {
+        return TVShowsRepository.getUserScore(context,id)
+    }
+
+    fun updateUserScore(context: Context,user_score: String,id:Int)
+    {
+        TVShowsRepository.updateUserScore(context,user_score,id)
+    }
+
+    fun getUserReview(context: Context,id:Int):LiveData<String>
+    {
+        return TVShowsRepository.getUserReview(context,id)
+    }
+
+    fun updateUserReview(context: Context,user_review: String,id:Int)
+    {
+        TVShowsRepository.updateUserReview(context,user_review,id)
+    }
+
 }
 

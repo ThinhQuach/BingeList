@@ -24,5 +24,10 @@ data class MyLists (
         entityColumn = "showId"
     )*/
     val casts: List<Cast>,
+    val user_review: String,
+    val user_score: String,
+    val movieId: String,
+    val tvShowId: String,
+    val type: String
 )
 

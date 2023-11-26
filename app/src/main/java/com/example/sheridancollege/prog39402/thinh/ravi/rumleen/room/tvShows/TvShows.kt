@@ -25,5 +25,8 @@ data class TvShows (
         entityColumn = "showId"
     )*/
     val casts: List<Cast>,
+
+    val user_review: String,
+    val user_score: String,
 )
 

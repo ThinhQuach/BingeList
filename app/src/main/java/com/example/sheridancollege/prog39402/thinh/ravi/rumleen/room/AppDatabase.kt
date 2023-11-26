@@ -23,7 +23,7 @@ import com.example.sheridancollege.prog39402.thinh.ravi.rumleen.room.watchList.W
 @Database(entities = [User::class,
     Cast::class,Movies::class,
     MyLists::class,TvShows::class,
-                     WatchList::class], version = 2)
+                     WatchList::class], version = 5)
 @TypeConverters(Converters::class) // Add this line
 
 abstract class AppDatabase : RoomDatabase() {

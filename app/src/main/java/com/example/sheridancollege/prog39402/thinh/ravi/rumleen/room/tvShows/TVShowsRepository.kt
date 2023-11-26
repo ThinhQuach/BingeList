@@ -3,7 +3,6 @@ package com.example.sheridancollege.prog39402.thinh.ravi.rumleen.room.tvShows
 import android.content.Context
 import androidx.lifecycle.LiveData
 import com.example.sheridancollege.prog39402.thinh.ravi.rumleen.room.AppDatabase
-import com.example.sheridancollege.prog39402.thinh.ravi.rumleen.room.movies.Movies
 import com.example.sheridancollege.prog39402.thinh.ravi.rumleen.room.movies.MoviesRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
@@ -54,10 +53,10 @@ class TVShowsRepository {
 
         fun insertList(context: Context,tvShows:List<TvShows>)
         {
-            TVShowsRepository.myDatabase = TVShowsRepository.intialiseDB(context)
+            myDatabase = intialiseDB(context)
 
             CoroutineScope(IO).launch{
-                MoviesRepository.myDatabase!!.tvShowsDao().insertTVShows(tvShows)
+                myDatabase!!.tvShowsDao().insertTVShows(tvShows)
             }
         }
         fun getAllTVShow(context: Context): LiveData<List<TvShows>>
@@ -71,6 +70,38 @@ class TVShowsRepository {
             myDatabase = intialiseDB(context)
 
             return myDatabase!!.tvShowsDao().getMovie(id)
+        }
+
+        fun getUserScore(context: Context,id: Int):LiveData<String>
+        {
+            myDatabase = intialiseDB(context)
+
+            return myDatabase!!.tvShowsDao().getUserScore(id)
+        }
+
+        fun updateUserScore(context: Context,user_score: String,id:Int)
+        {
+            myDatabase = intialiseDB(context)
+
+            CoroutineScope(IO).launch{
+                myDatabase!!.tvShowsDao().updateUserScore(user_score,id)
+            }
+        }
+
+        fun getUserReview(context: Context,id: Int):LiveData<String>
+        {
+            myDatabase = intialiseDB(context)
+
+            return myDatabase!!.tvShowsDao().getUserReview(id)
+        }
+
+        fun updateUserReview(context: Context,user_review: String,id:Int)
+        {
+            myDatabase = intialiseDB(context)
+
+            CoroutineScope(IO).launch{
+                myDatabase!!.tvShowsDao().updateUserReview(user_review,id)
+            }
         }
     }
 }

@@ -72,5 +72,37 @@ class MoviesRepository {
            return myDatabase!!.moviesDao().getMovie(id)
         }
 
+        fun getUserScore(context: Context,id: Int):LiveData<String>
+        {
+            myDatabase = intialiseDB(context)
+
+            return myDatabase!!.moviesDao().getUserScore(id)
+        }
+
+        fun updateUserScore(context: Context,user_score: String,id:Int)
+        {
+            myDatabase = intialiseDB(context)
+
+            CoroutineScope(IO).launch{
+                myDatabase!!.moviesDao().updateUserScore(user_score,id)
+            }
+        }
+
+        fun getUserReview(context: Context,id: Int):LiveData<String>
+        {
+            myDatabase = intialiseDB(context)
+
+            return myDatabase!!.moviesDao().getUserReview(id)
+        }
+
+        fun updateUserReview(context: Context,user_review: String,id:Int)
+        {
+            myDatabase = intialiseDB(context)
+
+            CoroutineScope(IO).launch{
+                myDatabase!!.moviesDao().updateUserReview(user_review,id)
+            }
+        }
+
     }
 }

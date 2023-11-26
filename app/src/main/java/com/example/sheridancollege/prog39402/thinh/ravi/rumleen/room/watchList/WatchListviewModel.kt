@@ -32,5 +32,42 @@ class WatchListviewModel() : ViewModel() {
         }
     }
 
+    fun getUserScore(context: Context,id:Int):LiveData<String>
+    {
+        return WatchListRepository.getUserScore(context,id)
+    }
+
+    fun updateUserScore(context: Context,user_score: String,id:Int)
+    {
+        WatchListRepository.updateUserScore(context,user_score,id)
+    }
+
+    fun getUserReview(context: Context,id:Int):LiveData<String>
+    {
+        return WatchListRepository.getUserReview(context,id)
+    }
+
+    fun updateUserReview(context: Context,user_review: String,id:Int)
+    {
+        WatchListRepository.updateUserReview(context,user_review,id)
+    }
+
+    fun getMovieId(context: Context,id:Int):LiveData<String>
+    {
+        return WatchListRepository.getMovieId(context,id)
+    }
+
+    fun getTvShowId(context: Context,id:Int):LiveData<String>
+    {
+        return WatchListRepository.getTvShowId(context,id)
+    }
+
+    fun getType(context: Context,id:Int):LiveData<String>
+    {
+        return WatchListRepository.getType(context,id)
+    }
+
+
+
 }
 

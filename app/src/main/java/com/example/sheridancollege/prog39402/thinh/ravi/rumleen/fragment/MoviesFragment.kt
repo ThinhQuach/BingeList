@@ -157,7 +157,9 @@ class MoviesFragment : Fragment() {
                 isInMyList = "No",
                 isWatched = "No",
                 casts = movie1Cast,
-                description = "Ethan Hunt and the IMF team must track down a terrifying new weapon that threatens all of humanity if it falls into the wrong hands. With control of the future and the fate of the world at stake, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan is forced to consider that nothing can matter more than the mission -- not even the lives of those he cares about most."
+                description = "Ethan Hunt and the IMF team must track down a terrifying new weapon that threatens all of humanity if it falls into the wrong hands. With control of the future and the fate of the world at stake, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan is forced to consider that nothing can matter more than the mission -- not even the lives of those he cares about most.",
+                user_review = "",
+                user_score = ""
             ),
             Movies(
                 name = "The Marvels",
@@ -171,7 +173,9 @@ class MoviesFragment : Fragment() {
                 isInMyList = "No",
                 isWatched = "No",
                 casts = movie2Cast,
-                description = "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. However, unintended consequences see her shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with two other superheroes to form the Marvels."
+                description = "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. However, unintended consequences see her shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with two other superheroes to form the Marvels.",
+                user_review = "",
+                user_score = ""
             ),
             Movies(
                 name = "The Little Mermaid",
@@ -185,7 +189,9 @@ class MoviesFragment : Fragment() {
                 isInMyList = "No",
                 isWatched = "No",
                 casts = movie3Cast,
-                description = "The youngest of King Triton's daughters, Ariel is a beautiful and spirited young mermaid with a thirst for adventure. Longing to find out more about the world beyond the sea, Ariel visits the surface and falls for the dashing Prince Eric. Following her heart, she makes a deal with the evil sea witch, Ursula, to experience life on land."
+                description = "The youngest of King Triton's daughters, Ariel is a beautiful and spirited young mermaid with a thirst for adventure. Longing to find out more about the world beyond the sea, Ariel visits the surface and falls for the dashing Prince Eric. Following her heart, she makes a deal with the evil sea witch, Ursula, to experience life on land.",
+                user_review = "",
+                user_score = ""
             ),
             Movies(
                 name = "The Super Mario Bros. Movie",
@@ -199,7 +205,9 @@ class MoviesFragment : Fragment() {
                 isInMyList = "No",
                 isWatched = "No",
                 casts = movie4Cast,
-                description = "While working underground to fix a water main, Brooklyn plumbers and brothers Mario and Luigi are transported through a mysterious pipe to a magical new world. But when the siblings are separated, an epic adventure begins."
+                description = "While working underground to fix a water main, Brooklyn plumbers and brothers Mario and Luigi are transported through a mysterious pipe to a magical new world. But when the siblings are separated, an epic adventure begins.",
+                user_review = "",
+                user_score = ""
             ),
         )
 

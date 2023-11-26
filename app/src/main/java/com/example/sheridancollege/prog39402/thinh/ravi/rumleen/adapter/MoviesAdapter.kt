@@ -7,7 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.graphics.drawable.toDrawable
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.sheridancollege.prog39402.thinh.ravi.rumleen.MovieDetailActivity
@@ -24,6 +26,7 @@ class MoviesAdapter(context:Activity,private var movies: List<Movies>) :
     }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgMovie: AppCompatImageView = itemView.findViewById(R.id.imgMovie)
+        val imgStar: AppCompatImageView = itemView.findViewById(R.id.imgStar)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -61,7 +64,19 @@ class MoviesAdapter(context:Activity,private var movies: List<Movies>) :
             intent.putExtra("isMyList",movies.isInMyList)
             intent.putExtra("director_name",movies.director_name)
             intent.putExtra("director_image",movies.director_image)
+            intent.putExtra("user_review",movies.user_review)
+            intent.putExtra("user_score",movies.user_score)
             context1.startActivity(intent)
+        }
+        holder.imgStar.setOnClickListener {
+            val currentTag = holder.imgStar.tag
+            if (currentTag == "ic_star" || currentTag == null) {
+                holder.imgStar.setImageResource(R.drawable.ic_star_after)
+                holder.imgStar.tag = "ic_star_after"
+            } else {
+                holder.imgStar.setImageResource(R.drawable.ic_star)
+                holder.imgStar.tag = "ic_star"
+            }
         }
 
     }

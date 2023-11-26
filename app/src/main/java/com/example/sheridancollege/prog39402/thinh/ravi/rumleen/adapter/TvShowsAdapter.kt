@@ -22,6 +22,7 @@ class TvShowsAdapter(context:Activity, private var tvShows: List<TvShows>) :
     }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgTVShow: AppCompatImageView = itemView.findViewById(R.id.imgTvShow)
+        val imgStar: AppCompatImageView = itemView.findViewById(R.id.imgStar)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -59,7 +60,19 @@ class TvShowsAdapter(context:Activity, private var tvShows: List<TvShows>) :
             intent.putExtra("isMyList",tvShows.isInMyList)
             intent.putExtra("director_name",tvShows.director_name)
             intent.putExtra("director_image",tvShows.director_image)
+            intent.putExtra("user_review",tvShows.user_review)
+            intent.putExtra("user_score",tvShows.user_score)
             context1.startActivity(intent)
+        }
+        holder.imgStar.setOnClickListener {
+            val currentTag = holder.imgStar.tag
+            if (currentTag == "ic_star" || currentTag == null) {
+                holder.imgStar.setImageResource(R.drawable.ic_star_after)
+                holder.imgStar.tag = "ic_star_after"
+            } else {
+                holder.imgStar.setImageResource(R.drawable.ic_star)
+                holder.imgStar.tag = "ic_star"
+            }
         }
 
     }

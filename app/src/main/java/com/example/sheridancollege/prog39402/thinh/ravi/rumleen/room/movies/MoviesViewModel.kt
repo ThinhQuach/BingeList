@@ -40,5 +40,25 @@ class MoviesViewModel() : ViewModel() {
     {
         MoviesRepository.updateIsWatched(context,isWatched,id)
     }
+
+    fun getUserScore(context: Context,id:Int):LiveData<String>
+    {
+        return MoviesRepository.getUserScore(context,id)
+    }
+
+    fun updateUserScore(context: Context,user_score: String,id:Int)
+    {
+        MoviesRepository.updateUserScore(context,user_score,id)
+    }
+
+    fun getUserReview(context: Context,id:Int):LiveData<String>
+    {
+        return MoviesRepository.getUserReview(context,id)
+    }
+
+    fun updateUserReview(context: Context,user_review: String,id:Int)
+    {
+        MoviesRepository.updateUserReview(context,user_review,id)
+    }
 }
 

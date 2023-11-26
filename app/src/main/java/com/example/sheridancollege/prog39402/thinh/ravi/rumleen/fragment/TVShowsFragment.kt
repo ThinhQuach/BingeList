@@ -158,7 +158,9 @@ class TVShowsFragment : Fragment() {
                 isInMyList = "No",
                 isWatched = "No",
                 casts = tvSHow1Cast,
-                description = "While attending Nevermore Academy, Wednesday Addams attempts to master her emerging psychic ability, thwart a killing spree and solve the mystery that embroiled her parents 25 years ago."
+                description = "While attending Nevermore Academy, Wednesday Addams attempts to master her emerging psychic ability, thwart a killing spree and solve the mystery that embroiled her parents 25 years ago.",
+                user_review = "",
+                user_score = ""
             ),
             TvShows(
                 name = "Locke & Key",
@@ -172,7 +174,9 @@ class TVShowsFragment : Fragment() {
                 isInMyList = "No",
                 isWatched = "No",
                 casts = tvSHows2Cast,
-                description = "Following their father's murder, three siblings move into a house filled with reality-bending keys; from the comics by Joe Hill and Gabriel Rodriguez."
+                description = "Following their father's murder, three siblings move into a house filled with reality-bending keys; from the comics by Joe Hill and Gabriel Rodriguez.",
+                user_review = "",
+                user_score = ""
             ),
             TvShows(
                 name = "Stranger Things",
@@ -186,7 +190,9 @@ class TVShowsFragment : Fragment() {
                 isInMyList = "No",
                 isWatched = "No",
                 casts = tvShows3Cast,
-                description = "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries."
+                description = "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.",
+                user_review = "",
+                user_score = ""
             ),
             TvShows(
                 name = "Money Heist",
@@ -200,7 +206,9 @@ class TVShowsFragment : Fragment() {
                 isInMyList = "No",
                 isWatched = "No",
                 casts = tvShows4Cast,
-                description = "A criminal mastermind who goes by \"The Professor\" has a plan to pull off the biggest heist in recorded history -- to print billions of euros in the Royal Mint of Spain. To help him carry out the ambitious plan, he recruits eight people with certain abilities and who have nothing to lose. The group of thieves take hostages to aid in their negotiations with the authorities, who strategize to come up with a way to capture The Professor. As more time elapses, the robbers prepare for a showdown with the police."
+                description = "A criminal mastermind who goes by \"The Professor\" has a plan to pull off the biggest heist in recorded history -- to print billions of euros in the Royal Mint of Spain. To help him carry out the ambitious plan, he recruits eight people with certain abilities and who have nothing to lose. The group of thieves take hostages to aid in their negotiations with the authorities, who strategize to come up with a way to capture The Professor. As more time elapses, the robbers prepare for a showdown with the police.",
+                user_review = "",
+                user_score = ""
             ),
         )
 

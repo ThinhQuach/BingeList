@@ -23,4 +23,25 @@ interface MyListDao {
     @Query("DELETE FROM mylist WHERE name = :name")
     suspend fun deleteMyList(name: String)
 
+    @Query("SELECT user_score FROM mylist WHERE id = :id")
+    fun getUserScore(id: Int): LiveData<String>
+
+    @Query("UPDATE mylist SET user_score = :user_score WHERE id = :id")
+    suspend fun updateUserScore(user_score: String,id:Int)
+
+    @Query("SELECT user_review FROM mylist WHERE id = :id")
+    fun getUserReview(id: Int): LiveData<String>
+
+    @Query("UPDATE mylist SET user_review = :user_review WHERE id = :id")
+    suspend fun updateUserReview(user_review: String,id:Int)
+
+    @Query("SELECT movieId FROM mylist WHERE id = :id")
+    fun getMovieId(id: Int): LiveData<String>
+
+    @Query("SELECT tvShowId FROM mylist WHERE id = :id")
+    fun getTvShowId(id: Int): LiveData<String>
+
+    @Query("SELECT type FROM mylist WHERE id = :id")
+    fun getType(id: Int): LiveData<String>
+
 }
