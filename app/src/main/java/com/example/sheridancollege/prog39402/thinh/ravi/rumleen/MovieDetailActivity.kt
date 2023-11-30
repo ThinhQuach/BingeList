@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.ViewGroup
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.lifecycle.Observer
@@ -279,6 +280,19 @@ class MovieDetailActivity : AppCompatActivity() {
                 finish()
             }
             customDialog.show()
+        }
+
+        binding.imgShare.setOnClickListener{
+            Toast.makeText(this, "$name, $rating", Toast.LENGTH_SHORT).show();
+
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "Checkout my new Binge List Rating:\nTitle:$name\nMy Rating:$rating\nDownload Binge List now to create your own rating!")
+                type = "text/plain"
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
         }
 
     }
