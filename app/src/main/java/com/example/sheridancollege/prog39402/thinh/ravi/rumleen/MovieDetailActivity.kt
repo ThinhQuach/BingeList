@@ -406,6 +406,18 @@ class MovieDetailActivity : AppCompatActivity() {
         binding.imgHome.setOnClickListener {
             finish()
         }
+        binding.imgShare.setOnClickListener{
+            Toast.makeText(this, "$name, $rating", Toast.LENGTH_SHORT).show();
+
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "Checkout my new Binge List Rating:\nTitle:$name\nMy Rating:$rating\nDownload Binge List now to create your own rating!")
+                type = "text/plain"
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
+        }
         binding.imgMore.setOnClickListener {
             val customDialog = Dialog(this)
             customDialog.setContentView(R.layout.dialog_more)
